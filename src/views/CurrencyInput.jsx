@@ -58,7 +58,7 @@ function useCurrencyRTLInput(callback, decimalDigits) {
       length = pointless.length,
       ints = pointless.slice(0, length - decimalDigits),
       decimals = pointless.slice(-decimalDigits),
-      newValue = parseFloat(`${ints}.${decimals}`).toString();
+      newValue = parseFloat(`${ints}.${decimals}`).toFixed(decimalDigits);
     e.target.value = newValue;
     callback(e);
   };
