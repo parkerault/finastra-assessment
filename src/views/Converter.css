@@ -1,0 +1,97 @@
+.inputs {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  width: 1024px;
+  --input-height: 2em;
+  --input-radius: 8px;
+  --input-font-size: 125%;
+}
+
+.input-label {
+  font-weight: 800;
+  color: #333;
+  position: relative;
+  margin-right: 20px;
+}
+
+.input-label-text {
+  padding-bottom: 8px;
+}
+
+.input-label::after {
+  content: "";
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: var(--input-height);
+  width: 3em;
+  background: #eeeeee;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+  border-top-left-radius: var(--input-radius);
+  border-bottom-left-radius: var(--input-radius);
+  font-size: var(--input-font-size);
+  font-weight: 400;
+}
+
+.currency-field {
+  box-sizing: border-box;
+  text-align: right;
+  padding: 8px;
+  height: 2em;
+  width: 100%;
+  font-size: var(--input-font-size);
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  border: 2px solid #eeeeee;
+  border-radius: var(--input-radius);
+}
+
+.currency-field:focus,
+.currency-field:active,
+.select-field:focus,
+.select-field:active {
+  outline: none;
+  border: 2px solid cyan;
+}
+
+.select-label {
+  margin-right: 20px;
+}
+
+.select-field {
+  padding: 8px 32px 8px 8px;
+  width: 100%;
+  height: var(--input-height);
+  border: 2px solid #eeeeee;
+  border-radius: var(--input-radius);
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--input-font-size);
+  appearance: none;
+  background: no-repeat 90%/15% url('../assets/caret-down.png') ;
+}
+
+.input-validation {
+  display: flex;
+  width: 1024px;
+  font-size: 12px;
+  color: darkred;
+}
+
+.input-validation-base,
+.input-validation-target {
+  width: 50%;
+}
+
+.input-disabled {
+  opacity: 0.5;
+}
+
+.status-text {
+  margin-top: 80px;
+}
